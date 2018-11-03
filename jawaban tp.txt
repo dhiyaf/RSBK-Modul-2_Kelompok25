@@ -1,0 +1,55 @@
+TP Modul 2
+1. Session Bean digunakan untuk memodelkan proses bisnis 
+atau merupakan logik bisnis dari aplikasi. 
+Proses yang dapat dilayani Session Bean
+misalnya: mendapatkan harga barang tertentu,
+merubah harga barang, dll.
+Stateless Session Bean (SLSB) adalah Session Bean yang tidak
+menyimpan state (keadaan) pada setiap kali eksekusi. Berbeda
+dengan Statefull Session Bean (SFSB) yang dapat menyimpan state
+2. Servlet adalah bahasa pemrograman Java kelas digunakan 
+untuk memperluas kemampuan dari server yang tuan aplikasi 
+mengakses melalui model pemrograman request-respon. 
+berbasis Java server-side teknologi web
+3. HTML adalah singkatan dari HyperText Markup Language 
+yaitu bahasa pemrograman  standar yang digunakan untuk membuat
+sebuah halaman web, yang kemudian dapat diakses untuk menampilkan
+berbagai informasi di dalam sebuah penjelajah web Internet (Browser).
+contoh : 
+<html>
+
+<head>
+
+<title>Selamat Datang di Websiteku</title>
+
+</head>
+
+<body>
+
+Ini adalah halaman HTML pertamaku.
+
+<p>Aku sedang membuat paragraf dan ini contohnya.</p>
+
+<p>Ini contoh paragraf yang lainnya.</p>
+
+<p>Ini juga paragraf mm…tapi de-<br>
+
+ngan baris baru.<br>
+
+Ini baris baru yang lain.</p>
+
+</body>
+
+</html>
+4. program => urutan perintah yang diberikan pada komputer 
+untuk membuat fungsi atau tugas tertentu. 
+karena basis dari HTML adalah bahasa makrup tidak memiliki logika
+untuk menjalankan perintah atau fungsi pada komputer.
+5. a) “Singleton”, yaitu konsep yang membatasi instance class
+hanya satu, atau dengan kata lain tidak boleh ada dua object 
+untuk class tersebut
+b) pada stateless tidak ada penyimpanan ataupun perubahan
+setiap kita mengakses aplikasi nya.
+c) suatu model aplikasi yang menggunakan penyimpanan (Session, dsb), 
+informasi yang diberikan sebelumnya disimpan dan mempengaruhi 
+konten/informasi/data yang akan diberikan setelahnya.
