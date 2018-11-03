@@ -39,56 +39,37 @@ public class konvertServlet extends HttpServlet {
         try {            
             out.println("<html>");
             out.println("<body");
-            out.println("<h1><center>Tugas RSBK Konversi Suhu</center></h1>");
-            String suhu = request.getParameter("suhu");
+            out.println("<h1><center>Tugas RSBK Keliling Bangun Datar</center></h1>");
+            String sisi = request.getParameter("sisi");
             
-            if ((suhu != null) && (suhu.length() > 0)) {
-                double d = Double.parseDouble(suhu);
-                if (request.getParameter("Celcius Ke Fahrenheit") != null){
-                    String cefa = konversiSuhu.celcius_fahrenheit(d);
-                    out.println("<p><center> HASIL KONVERSI SUHU Celcius-Fah: "+cefa+"</center></p>");
+            if ((sisi != null) && (sisi.length() > 0)) {
+                double d = Double.parseDouble(sisi);
+                if (request.getParameter("Persegi") != null){
+                    String pers = konversiSuhu.persegi(d);
+                    out.println("<p><center> HASIL KELILING PERSEGI: "+pers+"</center></p>");
                 }  
-                if (request.getParameter("Celcius Ke Reamur") != null) {
-                    String cere = konversiSuhu.celcius_reamure(d);
-                    out.println("<p><center> HASIL KONVERSI SUHU Cel-Rea: "+cere+ " .</center></p>");
+                if (request.getParameter("Segitiga Sama Sisi") != null) {
+                    String segi = konversiSuhu.segitiga(d);
+                    out.println("<p><center> HASIL KELILING SEGITIGA SAMA SISI: "+segi+ " .</center></p>");
                 }
-                if (request.getParameter("Reamur Ke Celcius") != null) {
-                    String rece = konversiSuhu.reamure_celcius(d);
-                    out.println("<p><center> HASIL KONVERSI SUHU Rea-cel: " +rece+ " .</center></p>");
+                if (request.getParameter("Lingkaran") != null) {
+                    String ling = konversiSuhu.lingkaran(d);
+                    out.println("<p><center> HASIL KELILING LINGKARAN: " +ling+ " .</center></p>");
                 }
-                if (request.getParameter("Reamur Ke Fahrenheit") != null) {
-                    String refa = konversiSuhu.reamure_fahrenheit(d);
-                    out.println("<p><center> HASIL KONVERSI SUHU Rea-Fah: "+refa+ " .<//center></p>");
-                }
-                if (request.getParameter("Fahrenheit Ke Celcius") != null) {
-                    String face = konversiSuhu.fahrenheit_celcius(d);
-                    out.println("<p><center> HASIL KONVERSI SUHU Fah-cel: "+face+ " .</center></p>");
-                }                
-                if (request.getParameter("Fahrenheit Ke Reamur") != null) {
-                    String fare = konversiSuhu.fahrenheit_reamure(d); 
-                    out.println("<p><center> HASIL KONVERSI SUHU Fah-re: "+fare+ " .</center></p>");
-                }
-                 if (request.getParameter("Celcius Ke kelvin") != null) {
-                    String fare = konversiSuhu.celcius_kel(d); 
-                    out.println("<p><center> HASIL KONVERSI SUHU Fah-re: "+fare+ " .</center></p>");
-                }
+                
             } else {
                 out.println("<center>");
-                out.println("<p>Masukan Suhu:</p>");
+                out.println("<p>Masukan Sisi / Diameter:</p>");
                 out.println("<form method=\"get\">");
-                out.println("<p><input type=\"text\" name=\"suhu\" size=\"20\"></p>");
+                out.println("<p><input type=\"text\" name=\"sisi\" size=\"20\"></p>");
                 out.println("<br/>");
                 out.println("<br/>");
-                out.println("<input type=\"submit\" name=\"Fahrenheit Ke Celcius\" value=\"Fahrenheit Ke Celcius\">"+ "<input type=\"submit\" name=\"Fahrenheit Ke Reamur\" value=\"Fahrenheit Ke Reamur\">"+"<input type=\"submit\" name=\"Celcius Ke kelvin\" value=\"Celcius Ke kelvin\">");
+                out.println("<input type=\"submit\" name=\"Persegi\" value=\"Persegi\">"+ "<input type=\"submit\" name=\"Segitiga Sama Sisi\" value=\"Segitiga Sama Sisi\">"+"<input type=\"submit\" name=\"Lingkaran\" value=\"Lingkaran\">");
                 out.println("<br/>");
-                out.println("<br/>");
-                out.println("<input type=\"submit\" name=\"Celcius Ke Fahrenheit\" value=\"Celcius Ke Fahrenheit\">"+ "<input type=\"submit\" name=\"Celcius Ke Reamur\" value=\"Celcius Ke Reamur\">");
-                out.println("<br/>");
-                out.println("<br/>");
-                out.println("<input type=\"submit\" name=\"Reamur Ke Fahrenheit\" value=\"Reamur Ke Fahrenheit\">"+ "<input type=\"submit\" name=\"Reamur Ke Celcius\" value=\"Reamur Ke Celcius\">");
                 out.println("</center>");
                 out.println("</form>");
             }
+        
         
         } finally {
             out.println("</center>");
